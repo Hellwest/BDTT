@@ -1,5 +1,4 @@
 import React, { ReactElement } from "react"
+import { Container } from "./main/container"
 
-export const IndexPage = (): ReactElement => {
-    return <div>Main page</div>
-}
+export const IndexPage = (): ReactElement => <Container />
