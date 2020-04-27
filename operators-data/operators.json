@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "МТС",
+    "image": "",
+    "alt": "MTS img"
+  },
+  {
+    "id": 2,
+    "name": "Tele2",
+    "image": "",
+    "alt": "Tele2 img"
+  },
+  {
+    "id": 3,
+    "name": "Beeline",
+    "image": "",
+    "alt": "Beeline img"
+  }
+]
