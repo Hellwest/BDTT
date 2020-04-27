@@ -34,6 +34,8 @@ module.exports = {
         semi: false,
         arrowParens: "always"
       }
-    ]
+    ],
+    "no-unused-vars": ["error", { argsIgnorePattern: "^_+" }],
+    "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_+" }]
   }
 }

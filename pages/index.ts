@@ -1,3 +1,4 @@
-import { IndexPage } from "../src/index.page";
+/* eslint-disable filenames/no-index */
+import { OperatorsPage } from "../src/operators/operators-page"
 
-export default IndexPage
+export default OperatorsPage
