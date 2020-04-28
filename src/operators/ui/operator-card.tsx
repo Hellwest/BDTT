@@ -1,17 +1,19 @@
 import React, { ReactElement } from "react"
 import styled from "styled-components"
+import { OperatorName } from "./operator-name"
+import { OperatorDescription } from "./operator-description"
 
 type Props = {
-  name?: string
+  name: string
   image?: string
-  alt?: string
+  alt: string
 }
 
 const CardContainer = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: inline-block;
+  margin: 20px;
   padding: 20px;
-  min-width: 320px;
+  min-width: 220px;
   background-color: white;
   border: solid 1px black;
   border-radius: 6px;
@@ -19,6 +21,7 @@ const CardContainer = styled.div`
 
 export const OperatorCard = ({ name, alt }: Props): ReactElement => (
   <CardContainer>
-    {name}, {alt}
+    <OperatorName name={name} />
+    <OperatorDescription alt={alt} />
   </CardContainer>
 )

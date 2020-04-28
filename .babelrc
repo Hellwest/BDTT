@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    [
+      "babel-plugin-styled-components",
+      {
+        "fileName": false
+      }
+    ]
+  ],
+  "presets": [
+    "next/babel"
+  ]
+}
