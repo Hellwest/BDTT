@@ -36,6 +36,15 @@ module.exports = {
       }
     ],
     "no-unused-vars": ["error", { argsIgnorePattern: "^_+" }],
-    "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_+" }]
+    "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_+" }],
+    "unicorn/prevent-abbreviations": [
+      "error", {
+        "replacements": {
+          "props": false,
+          "ctx": false
+        }
+      }
+    ],
+    "react/self-closing-comp": "warn"
   }
 }
