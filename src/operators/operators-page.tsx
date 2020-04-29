@@ -1,7 +1,9 @@
 import React, { ReactElement } from "react"
-import { OperatorCard } from "./ui/operator-card"
-import operators from "../../operators-data/operators.json"
 import styled from "styled-components"
+
+import operators from "../../operators-data/operators.json"
+
+import { OperatorCard } from "./ui/operator-card"
 
 interface OperatorProperties {
   id: number

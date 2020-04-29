@@ -4,6 +4,4 @@ interface Props {
   name: string
 }
 
-export const OperatorName = ({ name }: Props): ReactElement => {
-  return <p>{name}</p>
-}
+export const OperatorName = ({ name }: Props): ReactElement => <p>{name}</p>

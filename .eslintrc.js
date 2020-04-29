@@ -45,6 +45,7 @@ module.exports = {
         }
       }
     ],
-    "react/self-closing-comp": "warn"
+    "react/self-closing-comp": "warn",
+    "import/order": ["error", { "newlines-between": "always" }]
   }
 }
