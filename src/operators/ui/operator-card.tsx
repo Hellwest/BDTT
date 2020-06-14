@@ -1,27 +1,37 @@
 import React, { ReactElement } from "react"
 import styled from "styled-components"
+import Link from "next/link"
+
+import { Box } from "../../ui/box"
+import { routes } from "../../routes"
 
 import { OperatorName } from "./operator-name"
 import { OperatorImage } from "./operator-image"
 
-type Props = {
+interface Props {
+  id: number
   name: string
   image: string
   alt: string
 }
 
-const CardContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+const StyledBox = styled(Box)`
   text-decoration: none;
-  color: inherit;
+  cursor: pointer;
 `
 
-export const OperatorCard = ({ name, image, alt }: Props): ReactElement => (
-  <CardContainer as="a" href="/operator?id=operator-id">
-    <OperatorName name={name} />
-    <OperatorImage image={image} alt={alt} />
-  </CardContainer>
+// FIXME: link preview is not displayed by browser when hovering an operator
+export const OperatorCard = ({ id, name, image, alt }: Props): ReactElement => (
+  <Link href={`${routes.operator}?id=${id}`}>
+    <StyledBox
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      textAlign="center"
+      color="inherit"
+    >
+      <OperatorName name={name} />
+      <OperatorImage image={image} alt={alt} />
+    </StyledBox>
+  </Link>
 )

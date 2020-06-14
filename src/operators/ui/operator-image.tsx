@@ -10,6 +10,11 @@ const ImageContainer = styled.img`
   height: ${(p): string => (p.height ? p.height.toString() : "400px")};
   width: ${(p): string => (p.width ? p.width.toString() : "450px")};
 
+  @media (max-width: 1350px) {
+    height: 300px;
+    width: 350px;
+  }
+
   @media (max-width: 360px), (max-height: 640px) {
     height: 160px;
     width: 180px;
@@ -32,6 +37,11 @@ const ImageContainer = styled.img`
 
   @media (max-width: 320px), (max-height: 568px) {
     height: 100px;
+  }
+
+  @media (max-width: 1024px) and (min-height: 768px) {
+    height: 200px;
+    width: 250px;
   }
 `
 
