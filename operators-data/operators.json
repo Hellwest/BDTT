@@ -2,19 +2,19 @@
   {
     "id": 1,
     "name": "МТС",
-    "image": "/images/MTS.png",
+    "image": "/images/mts-logo.png",
     "alt": "MTS img"
   },
   {
     "id": 2,
-    "name": "Tele2",
-    "image": "/images/tele2.svg",
-    "alt": "Tele2 img"
+    "name": "Beeline",
+    "image": "/images/beeline-logo.png",
+    "alt": "Beeline img"
   },
   {
     "id": 3,
-    "name": "Beeline",
-    "image": "/images/Beeline.jpg",
-    "alt": "Beeline img"
+    "name": "Megafon",
+    "image": "/images/megafon-logo.png",
+    "alt": "Megafon img"
   }
 ]
