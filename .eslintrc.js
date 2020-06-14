@@ -26,6 +26,10 @@ module.exports = {
     "filenames/match-regex": ["error", "^[a-z0-9.-]+$", false],
     "filenames/no-index": "error",
     "no-secrets/no-secrets": "error",
+    "no-unused-vars": ["error", { argsIgnorePattern: "^_+" }],
+    "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_+" }],
+    "react/self-closing-comp": "warn",
+    "import/order": ["error", { "newlines-between": "always" }],
     "prettier/prettier": [
       "error",
       {
@@ -35,8 +39,6 @@ module.exports = {
         arrowParens: "always"
       }
     ],
-    "no-unused-vars": ["error", { argsIgnorePattern: "^_+" }],
-    "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_+" }],
     "unicorn/prevent-abbreviations": [
       "error", {
         "replacements": {
@@ -45,7 +47,9 @@ module.exports = {
         }
       }
     ],
-    "react/self-closing-comp": "warn",
-    "import/order": ["error", { "newlines-between": "always" }]
+    "padding-line-between-statements": [
+      "warn",
+      { blankLine: "always", "prev": "*", "next": ["return", "if", "for", "export"] }
+    ]
   }
 }
