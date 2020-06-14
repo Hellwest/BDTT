@@ -13,15 +13,20 @@ interface OperatorProperties {
 }
 
 const OperatorsContainer = styled.div`
-  display: inline-block;
-  margin: 60px 20px;
-  height: 90vh;
-  min-width: 2510px;
-  max-width: 2510px;
-  text-align: center;
-  border: 1px solid blue;
-  border-radius: 6px;
-  background-color: #ece6e5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+
+  @media (max-width: 1350px) and (min-height: 560px) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 1024px) and (min-height: 767px) {
+    flex-direction: row;
+  }
 `
 
 export const OperatorsPage = (): ReactElement => (

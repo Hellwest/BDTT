@@ -2,7 +2,6 @@ import React, { ReactElement } from "react"
 import styled from "styled-components"
 
 import { OperatorName } from "./operator-name"
-import { OperatorDescription } from "./operator-description"
 import { OperatorImage } from "./operator-image"
 
 type Props = {
@@ -12,13 +11,10 @@ type Props = {
 }
 
 const CardContainer = styled.div`
-  display: inline-block;
-  margin: 30vh 100px;
-  padding: 20px;
-  min-width: 220px;
-  background-color: white;
-  border: solid 1px black;
-  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   text-decoration: none;
   color: inherit;
 `
@@ -26,10 +22,6 @@ const CardContainer = styled.div`
 export const OperatorCard = ({ name, image, alt }: Props): ReactElement => (
   <CardContainer as="a" href="/operator?id=operator-id">
     <OperatorName name={name} />
-    {image ? (
-      <OperatorImage image={image} />
-    ) : (
-      <OperatorDescription alt={alt} />
-    )}
+    <OperatorImage image={image} alt={alt} />
   </CardContainer>
 )
