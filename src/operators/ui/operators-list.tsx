@@ -3,15 +3,9 @@ import styled from "styled-components"
 
 import { Box } from "../../ui/box"
 import operators from "../../../operators-data/operators.json"
+import { OperatorProperties } from "../../utils/operator-properties"
 
 import { OperatorCard } from "./operator-card"
-
-interface OperatorProperties {
-  id: number
-  name: string
-  image: string
-  alt: string
-}
 
 const StyledBox = styled(Box)`
   @media (max-width: 1350px) and (min-height: 560px) {
