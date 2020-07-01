@@ -8,20 +8,18 @@ import { routes } from "../../routes"
 import { OperatorName } from "./operator-name"
 import { OperatorImage } from "./operator-image"
 
-interface Props {
-  id: number
-  name: string
-  image: string
-  alt: string
-}
-
 const StyledBox = styled(Box)`
   text-decoration: none;
   cursor: pointer;
 `
 
 // FIXME: link preview is not displayed by browser when hovering an operator
-export const OperatorCard = ({ id, name, image, alt }: Props): ReactElement => (
+export const OperatorCard = ({
+  id,
+  name,
+  image,
+  alt,
+}: OperatorProperties): ReactElement => (
   <Link href={`${routes.operator}?id=${id}`}>
     <StyledBox
       display="flex"

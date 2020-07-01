@@ -3,7 +3,6 @@ import styled from "styled-components"
 
 import { Box } from "../../ui/box"
 import operators from "../../../operators-data/operators.json"
-import { OperatorProperties } from "../../utils/operator-properties"
 
 import { OperatorCard } from "./operator-card"
 

@@ -1,4 +1,4 @@
-export interface OperatorProperties {
+interface OperatorProperties {
   id: number
   name: string
   image: string
