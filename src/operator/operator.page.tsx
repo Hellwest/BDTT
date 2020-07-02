@@ -3,6 +3,9 @@ import { useRouter } from "next/dist/client/router"
 import Head from "next/head"
 
 import operators from "../../operators-data/operators.json"
+import { Box } from "../ui/box"
+
+import { OperatorInfo } from "./ui/operator-info"
 
 export const OperatorPage = (): ReactElement => {
   const router = useRouter()
@@ -10,10 +13,10 @@ export const OperatorPage = (): ReactElement => {
 
   const id = Number(router.query.id)
 
+  const operator = operators.find((operator): boolean => operator.id === id)
+
   useEffect(() => {
-    setOperatorName(
-      operators.find((operator): boolean => operator.id === id)?.name,
-    )
+    setOperatorName(operator?.name)
   })
 
   return (
@@ -21,7 +24,24 @@ export const OperatorPage = (): ReactElement => {
       <Head>
         <title>Оператор связи {operatorName}</title>
       </Head>
-      {`operatorId: ${id}`}
+
+      {operator && (
+        <Box
+          display="flex"
+          padding="100px"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+          height="100vh"
+        >
+          <OperatorInfo
+            id={operator.id}
+            name={operator.name}
+            image={operator.image}
+            alt={operator.alt}
+          />
+        </Box>
+      )}
     </Fragment>
   )
 }
