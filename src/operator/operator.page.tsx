@@ -5,6 +5,7 @@ import Head from "next/head"
 import operators from "../../operators-data/operators.json"
 import { Box } from "../ui/box"
 
+import { PaymentForm } from "./ui/payment.form"
 import { OperatorInfo } from "./ui/operator-info"
 
 export const OperatorPage = (): ReactElement => {
@@ -40,6 +41,7 @@ export const OperatorPage = (): ReactElement => {
             image={operator.image}
             alt={operator.alt}
           />
+          <PaymentForm />
         </Box>
       )}
     </Fragment>

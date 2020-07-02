@@ -4,3 +4,8 @@ interface OperatorProperties {
   image: string
   alt: string
 }
+
+interface PaymentInput {
+  phone: string
+  sum: number
+}
