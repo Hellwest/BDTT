@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { setTimeout } from "timers"
 
 import React, { ReactElement, ReactText } from "react"
@@ -34,13 +32,12 @@ export const PaymentForm = (): ReactElement => {
     sum: 0,
   }
 
-  // eslint-disable-next-line unicorn/consistent-function-scoping
   const handleSubmit = (
     _values: PaymentInput,
     { setSubmitting, setFieldValue }: FormikActions<PaymentInput>,
   ): void => {
     setTimeout(() => {
-      const isSuccessful = false // Math.round(Math.random())
+      const isSuccessful = Math.round(Math.random())
 
       if (!isSuccessful) {
         failToast()
