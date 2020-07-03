@@ -17,7 +17,7 @@ export const PaymentView = (
       justifyContent="space-around"
     >
       <PhoneInputField {...formikBag} />
-      <SumInputField {...formikBag} />
+      <SumInputField />
       <button type="submit" disabled={formikBag.isSubmitting}>
         {"Оплатить"}
       </button>
