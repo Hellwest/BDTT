@@ -5,7 +5,6 @@ import { Formik, FormikHelpers as FormikActions, FormikProps } from "formik"
 import { useRouter } from "next/dist/client/router"
 import { toast } from "react-toastify"
 
-import { Box } from "../../ui/box"
 import { PaymentInputSchema } from "../../validation-schemas/payment-input.schema"
 import { routes } from "../../routes"
 import { toastOptions } from "../../utils/toast-options"
@@ -48,15 +47,13 @@ export const PaymentForm = (): ReactElement => {
   }
 
   return (
-    <Box marginTop="100px">
-      <Formik
-        initialValues={initialValues}
-        validationSchema={PaymentInputSchema}
-        onSubmit={handleSubmit}
-        component={(formikBag: FormikProps<PaymentInput>): ReactElement => (
-          <PaymentView {...formikBag} />
-        )}
-      />
-    </Box>
+    <Formik
+      initialValues={initialValues}
+      validationSchema={PaymentInputSchema}
+      onSubmit={handleSubmit}
+      component={(formikBag: FormikProps<PaymentInput>): ReactElement => (
+        <PaymentView {...formikBag} />
+      )}
+    />
   )
 }

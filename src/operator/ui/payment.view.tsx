@@ -12,7 +12,6 @@ export const PaymentView = (
   <Form>
     <Box
       display="flex"
-      height="20vh"
       width="300px"
       flexDirection="column"
       justifyContent="space-around"

@@ -29,7 +29,6 @@ export const OperatorPage = (): ReactElement => {
       {operator && (
         <Box
           display="flex"
-          padding="100px"
           flexDirection="column"
           alignItems="center"
           justifyContent="center"
