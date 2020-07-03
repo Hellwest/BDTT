@@ -7,5 +7,5 @@ interface OperatorProperties {
 
 interface PaymentInput {
   phone: string
-  sum: number
+  sum: string
 }
