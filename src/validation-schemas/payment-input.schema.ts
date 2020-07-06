@@ -8,7 +8,7 @@ export const PaymentInputSchema = yup.object().shape({
   sum: yup
     .number()
     .integer()
-    .positive("Должно быть положительным числом")
+    .min(1, "Минимальная сумма - 1р.")
     .max(1000, "Максимальная сумма - 1000р.")
     .required("Обязательное поле"),
 })
