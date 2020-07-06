@@ -5,24 +5,27 @@ import {
   layout,
   flexbox,
   compose,
+  typography,
+  border,
   SpaceProps,
   ColorProps,
   LayoutProps,
   FlexboxProps,
   TypographyProps,
-  typography,
+  BordersProps,
 } from "styled-system"
 
 export type BoxProps = SpaceProps &
   ColorProps &
   LayoutProps &
   FlexboxProps &
-  TypographyProps
+  TypographyProps &
+  BordersProps
 
 export const Box = styled.div<BoxProps>`
   min-width: 0;
   box-sizing: border-box;
   overflow: hidden;
 
-  ${compose(space, color, layout, flexbox, typography)}
+  ${compose(space, color, layout, flexbox, typography, border)}
 `

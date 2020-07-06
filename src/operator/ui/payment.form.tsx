@@ -19,7 +19,7 @@ const successToast = (): ReactText =>
 
 export const PaymentForm = (): ReactElement => {
   const router = useRouter()
-  const [isSuccessful, setisSuccessful] = useState<boolean>(false)
+  const [isSuccessful, setIsSuccessful] = useState<boolean>(false)
 
   const initialValues: PaymentInput = {
     phone: "",
@@ -42,7 +42,7 @@ export const PaymentForm = (): ReactElement => {
 
       successToast()
       setSubmitting(false)
-      setisSuccessful(true)
+      setIsSuccessful(true)
 
       setTimeout(() => router.push(routes.index), 3000)
     }, 500)

@@ -5,6 +5,7 @@ import { Box } from "../../ui/box"
 
 import { PhoneInputField } from "./phone-input-field"
 import { SumInputField } from "./sum-input-field"
+import { StyledButton } from "./styled-button"
 
 interface Props {
   isSuccessful: boolean
@@ -24,9 +25,12 @@ export const PaymentView = ({
     >
       <PhoneInputField {...formikBag} />
       <SumInputField {...formikBag} />
-      <button type="submit" disabled={formikBag.isSubmitting || isSuccessful}>
+      <StyledButton
+        type="submit"
+        isDisabled={formikBag.isSubmitting || isSuccessful}
+      >
         {!isSuccessful ? "Оплатить" : "Перенаправление..."}
-      </button>
+      </StyledButton>
     </Box>
   </Form>
 )

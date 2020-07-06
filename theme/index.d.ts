@@ -9,3 +9,5 @@ interface PaymentInput {
   phone: string
   sum: string
 }
+
+type EnumLiteralsOf<T extends object> = T[keyof T]
