@@ -1,6 +1,6 @@
 import { setTimeout } from "timers"
 
-import React, { ReactElement, ReactText } from "react"
+import React, { ReactElement, ReactText, useState } from "react"
 import { Formik, FormikHelpers as FormikActions, FormikProps } from "formik"
 import { useRouter } from "next/dist/client/router"
 import { toast } from "react-toastify"
@@ -19,6 +19,7 @@ const successToast = (): ReactText =>
 
 export const PaymentForm = (): ReactElement => {
   const router = useRouter()
+  const [isSuccessful, setisSuccessful] = useState<boolean>(false)
 
   const initialValues: PaymentInput = {
     phone: "",
@@ -41,6 +42,7 @@ export const PaymentForm = (): ReactElement => {
 
       successToast()
       setSubmitting(false)
+      setisSuccessful(true)
 
       setTimeout(() => router.push(routes.index), 3000)
     }, 500)
@@ -52,7 +54,7 @@ export const PaymentForm = (): ReactElement => {
       validationSchema={PaymentInputSchema}
       onSubmit={handleSubmit}
       component={(formikBag: FormikProps<PaymentInput>): ReactElement => (
-        <PaymentView {...formikBag} />
+        <PaymentView isSuccessful={isSuccessful} formikBag={formikBag} />
       )}
     />
   )

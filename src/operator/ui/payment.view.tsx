@@ -6,9 +6,15 @@ import { Box } from "../../ui/box"
 import { PhoneInputField } from "./phone-input-field"
 import { SumInputField } from "./sum-input-field"
 
-export const PaymentView = (
-  formikBag: FormikProps<PaymentInput>,
-): ReactElement => (
+interface Props {
+  isSuccessful: boolean
+  formikBag: FormikProps<PaymentInput>
+}
+
+export const PaymentView = ({
+  isSuccessful,
+  formikBag,
+}: Props): ReactElement => (
   <Form>
     <Box
       display="flex"
@@ -18,8 +24,8 @@ export const PaymentView = (
     >
       <PhoneInputField {...formikBag} />
       <SumInputField {...formikBag} />
-      <button type="submit" disabled={formikBag.isSubmitting}>
-        {"Оплатить"}
+      <button type="submit" disabled={formikBag.isSubmitting || isSuccessful}>
+        {!isSuccessful ? "Оплатить" : "Перенаправление..."}
       </button>
     </Box>
   </Form>
