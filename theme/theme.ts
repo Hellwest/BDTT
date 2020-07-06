@@ -9,4 +9,9 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     background-color: #87cefa;
   }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `
