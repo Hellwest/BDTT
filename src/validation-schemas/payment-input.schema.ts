@@ -3,8 +3,7 @@ import * as yup from "yup"
 export const PaymentInputSchema = yup.object().shape({
   phone: yup
     .string()
-    .min(18)
-    .max(18)
+    .matches(/^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/, "Введите валидный номер")
     .required("Обязательное поле"),
   sum: yup
     .number()
