@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react"
+import React, { ReactElement, FocusEvent } from "react"
 import MaskedInput from "react-text-mask"
 import { FormikProps } from "formik"
 import styled from "styled-components"
@@ -22,6 +22,21 @@ const BorderedMaskedInput = styled(MaskedInput)`
 
 const phone = "phone"
 
+const handleClick = (event: FocusEvent<HTMLInputElement>): void => {
+  const target = event.target
+  const index = target.value.search(/_/)
+
+  const nextDigit =
+    target.selectionStart && +target.value[target.selectionStart]
+  const previousDigit =
+    target.selectionStart && +target.value[target.selectionStart - 1]
+
+  if (!nextDigit && !previousDigit) {
+    target.focus()
+    target.setSelectionRange(index, index)
+  }
+}
+
 export const PhoneInputField = ({
   values,
   handleChange,
@@ -35,6 +50,9 @@ export const PhoneInputField = ({
       mask={phoneMask}
       name={phone}
       onChange={handleChange}
+      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+      // @ts-ignore
+      onClick={handleClick}
     />
     <InputFeedback name={phone} />
   </Box>

@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { InputFeedback } from "../../ui/input-feedback"
 import { Box } from "../../ui/box"
 
-const StyledField = styled(Field)`
+const BorderedField = styled(Field)`
   margin: 5px 0;
   padding: 5px 10px;
   border-width: 1px;
@@ -34,7 +34,7 @@ export const SumInputField = ({
   return (
     <Box display="flex" flexDirection="column" marginBottom="10px">
       <label htmlFor={sum}>Сумма:</label>
-      <StyledField id={sum} name={sum} onChange={handleChange} />
+      <BorderedField id={sum} name={sum} onChange={handleChange} />
       <InputFeedback name={sum} />
     </Box>
   )
