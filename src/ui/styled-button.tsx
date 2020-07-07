@@ -1,7 +1,7 @@
 import React, { ReactElement, ReactNode } from "react"
 import styled from "styled-components"
 
-import { ButtonTypes } from "../../utils/button-types"
+import { ButtonTypes } from "../utils/button-types"
 
 interface Props {
   type?: ButtonTypes

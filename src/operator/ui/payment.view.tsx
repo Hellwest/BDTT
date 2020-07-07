@@ -2,10 +2,10 @@ import React, { ReactElement } from "react"
 import { Form, FormikProps } from "formik"
 
 import { Box } from "../../ui/box"
+import { StyledButton } from "../../ui/styled-button"
 
 import { PhoneInputField } from "./phone-input-field"
 import { SumInputField } from "./sum-input-field"
-import { StyledButton } from "./styled-button"
 
 interface Props {
   isSuccessful: boolean
